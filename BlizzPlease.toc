@@ -1,0 +1,11 @@
+## Interface: 20400
+## Title: BlizzPlease |cffff0000 -Dep|r
+## Author: Dep
+## Version: 1.0
+## Notes: Collection of fixes for the default UI.
+
+HookMaster.lua
+RaidInfoFix.lua
+TalentFrameFix.lua
+Spellbookfix.lua
+QuestLogFix.lua
