@@ -6,7 +6,7 @@
 
 - Harmonized Title Alignments: The talents frame title text is now positioned smack-dab in the middle of the header bar, the quest log frame title is no longer attempting to escape its frame, and the spellbook frame title is perfectly aligned with the header bar. Experience flawless symmetry across your UI.
 
-![raidinfo](https://github.com/user-attachments/assets/cf68618b-73d1-48fc-9702-8cf9423f7ba7)
+![raidinfo_alignleft](https://github.com/user-attachments/assets/996c88b1-6664-4327-abd4-1bc8ed45ae09)
 
 # 📥 Installation
 Download BlizzPlease as a ZIP file from the GitHub repository.
