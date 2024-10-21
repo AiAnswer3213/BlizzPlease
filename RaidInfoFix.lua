@@ -1,12 +1,14 @@
 -- INSTANCE             ID      << table header, stays constant (not part of the scroll frame)
 -- Zul'Gurub            1       << instance name set from -2 to 0 xoffset
---  Resets in 2 days            << reset moved right by 2
+-- Resets in 2 days             << 
 
--- in RaidFrame.xml the RaidInfoInstanceTemplate includes negative 2 x offset which clips the text on the left side
--- We move the contents of the RaidInfoScrolLFrame to the right by 2 so the ..InstanceName starts at xoffset 0
+-- in RaidFrame.xml the RaidInfoInstanceTemplate the RaidInfoInstance1Name is offset by -2 which clips the text
+-- The other elements are positioned relative to the name
+-- Moving the names right to 0 offset fixes the clipping and aligns the other elements
 -- Move the RaidInfoScrolLFrame to the left by 2 to align it back to the design
 
--- TODO: The ID header alignment in relation to the ID data alignment looks odd when scrolling is enabled
+-- The ID header alignment in relation to the ID data alignment looks odd when scrolling is enabled
+-- right aligning it looks a lot better: /run RaidInfoInstance1ID:SetPoint("RIGHT", "RaidInfoInstance1Name", "RIGHT", 35, -1)
 
 -- Coordinates are in format: defaultPosition+moveBy
 local function BPHook_RaidInfoFrame_Update()
@@ -16,16 +18,13 @@ local function BPHook_RaidInfoFrame_Update()
             instname:SetPoint("TOPLEFT", 0, 0)
         end
 
-        local instid = _G["RaidInfoInstance" .. i .. "ID"]
-        if (instid) then
-            local point, relativeTo, relativePoint, xOfs, yOfs = instid:GetPoint()
-            instid:SetPoint(point, relativeTo, relativePoint, 0+2, yOfs)
-        end
-
-        local instreset = _G["RaidInfoInstance" .. i .. "Reset"]
-        if (instreset) then
-            local point, relativeTo, relativePoint, xOfs, yOfs = instreset:GetPoint()
-            instreset:SetPoint(point, relativeTo, relativePoint, 0+2, yOfs)
+        -- reposition ids when scrolling is enabled
+        if (RaidInfoFrame.scrolling) then
+            local instid = _G["RaidInfoInstance" .. i .. "ID"]
+            if (instid) then
+                local point, relativeTo, relativePoint, xOfs, yOfs = instid:GetPoint()
+                instid:SetPoint("RIGHT", relativeTo, "RIGHT", 35, yOfs)
+            end
         end
     end
 
