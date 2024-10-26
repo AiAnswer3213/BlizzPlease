@@ -10,6 +10,8 @@
 -- The ID header alignment in relation to the ID data alignment looks odd when scrolling is enabled
 -- right aligning it looks a lot better: /run RaidInfoInstance1ID:SetPoint("RIGHT", "RaidInfoInstance1Name", "RIGHT", 35, -1)
 
+-- TODO: Check if the first reset text is misaligned to the 2nd one
+
 -- Coordinates are in format: defaultPosition+moveBy
 local function BPHook_RaidInfoFrame_Update()
     for i = 1, MAX_RAID_INFOS do

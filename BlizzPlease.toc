@@ -9,3 +9,4 @@ RaidInfoFix.lua
 TalentFrameFix.lua
 Spellbookfix.lua
 QuestLogFix.lua
+InterfaceOptionsFix.lua
