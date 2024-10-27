@@ -16,3 +16,6 @@ Download BlizzPlease as a ZIP file from the GitHub repository.
 Unzip the file and ensure the folder is named BlizzPlease to match the .toc file.
 
 Move the BlizzPlease folder into your AddOns directory (/Interface/AddOns).
+
+# 🐞 Bug Reports
+If you encounter any bugs in the default UI or in the addon, please open an issue on our [Issues Page](https://github.com/AiAnswer3213/BlizzPlease/issues) to get a discussion started.
