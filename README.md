@@ -8,6 +8,8 @@
 
 - Persistent Interface Options: The Show Cloak and Show Helm settings now stop resetting unexpectedly on cancel.
 
+- Fixed overlap in Quest rewards
+
 ![raidinfo_alignleft](https://github.com/user-attachments/assets/996c88b1-6664-4327-abd4-1bc8ed45ae09)
 
 # 📥 Installation
